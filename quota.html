@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>银行限额说明</title>
+  <meta charset="utf-8">
+  <meta name="keywords" content="金融，社交，信用，熟信，借贷，征信，理财，贷款">
+  <meta name="description" content="熟信--首款社交金融应用。信用好不好，熟人知道，熟信知道。下载熟信，对熟人匿名授信，也可查询自己、熟人信用。熟人匿名借贷功能即将推出，让借贷更体面。">
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=false">
+  
+  <!-- Set render engine for 360 browser -->
+  <meta name="renderer" content="webkit">
+  <!-- No Baidu Siteapp-->
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+  <meta name="apple-itunes-app" content="app-id=955361348">
+  <link rel="icon" type="image/png" href="images/favicon.png">
+
+  <!-- Add to homescreen for Chrome on Android -->
+  <meta name="mobile-web-app-capable" content="yes">
+
+  <!-- Add to homescreen for Safari on iOS -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="shuxin UI">
+
+  <!-- Tile icon for Win8 (144x144 + tile color) -->
+  <meta name="msapplication-TileImage" content="images/favicon.png">
+  <meta name="msapplication-TileColor" content="#0e90d2">
+
+  <!-- 使用的CSS -->
+  <link rel="stylesheet" href="css/amaze/amazeui.css">
+  <link rel="stylesheet" href="css/public.css">
+  <link rel="stylesheet" href="css/info.css">
+
+  <!-- 使用的JS -->
+  <script src="js/jquery/jquery-2.0.3.min.js"></script>
+  <script src="js/amaze/amazeui.min.js"></script>
+  
+  <script src="js/jquery.sx.common.js"></script>
+  <script>
+    $(function(){
+      jQuery(function(){
+         // 应用头部headerFixed 文件
+         $("header.am-topbar").headerFixed();
+      })
+    })
+  </script>
+<style>
+
+/* IE自定义滚动条 */
+html{
+	 scrollbar-face-color:#ccc;
+	 scrollbar-highlight-color:#ccc;
+	 scrollbar-shadow-color:#ccc;
+	 scrollbar-3dlight-color:#ccc;
+	 scrollbar-arrow-color:#fff;
+	 scrollbar-track-color:#f0f0f0;
+	 scrollbar-darkshadow-color:#ccc;
+	 scrollbar-base-color :#cc0;	 
+ }
+
+/* -webkit(chrome、opera)内核自定义滚动条 */
+::-webkit-scrollbar { 
+   height: 10px;
+}
+::-webkit-scrollbar-button{ 
+   background: #f00!important;
+   display: none;
+}
+::-webkit-scrollbar-track{ 
+   background:#f0f0f0;
+   -webkit-box-shadow: 0 0 4px 4px #e8e8e8 inset;
+      -moz-box-shadow: 0 0 4px 4px #e8e8e8 inset;
+           box-shadow:0 0 4px 4px #e8e8e8 inset ;
+}
+::-webkit-scrollbar-track-piece  {  }
+::-webkit-scrollbar-thumb        {  
+   background-color: #ccc;
+   background-color: rgba(0,0,0,0.1);
+   border-radius:4px;
+}
+
+/* 表格样式 */
+#wrap{margin-top:55px;min-width:320px;max-width:1040px;overflow:auto;height:auto}
+#table-wrap{width: 1040px;}
+
+.sx-table thead{
+	background: #dddddd;
+}
+.sx-table thead th{
+	border-bottom: none!important;
+	height: 80px;	
+	font-weight: normal;
+	font-size:16px;
+}
+.sx-table tr:nth-of-type(2n) td{
+	background-color: #f5f5f5;
+}
+.sx-table tr th,
+.sx-table tr td{
+	text-align: center;
+	vertical-align: middle!important;
+}
+.sx-table tr td{
+	border-top: none!important;
+}
+.sx-table tr .hl-y{
+	background-color: #FFFF00;
+	width: 120%;
+	position: relative;
+	margin-left:-10%;
+}
+.sx-table tr .hl-r{
+	background-color: #FABF8F;
+	width: 114%;
+	position: relative;
+	margin-left:-7%;
+}
+.sx-table tr td div{
+	display: block;
+	vertical-align:middle
+	line-height: 24px;
+	height: 24px;
+}	
+
+
+</style>
+</head>
+<body>
+<!-- 页头 -->
+<!--#include file="/inc/header.inc"-->
+
+<article class="article" id="navTabs">
+
+  <section class="col-md-12 am-u-md-12 nav-tabs-bd" id="navTabs-bd">
+    <div class="content" id="userAgreement">
+        <h3>银行限额说明<span class="line" style="margin-left:6.5em"></span></h3> 
+		
+		<div id="wrap">
+		<div id="table-wrap">
+		<table class="am-table sx-table">
+		  <thead>
+		      <tr>
+		          <th style="width:96px">接口名称</th>
+		          <th style="width:3em">大额/普通/WAP</th>
+		          <th style="width:96px">覆盖区域</th>
+		          <th style="width:96px">支持卡种	</th>
+		          <th>用户类型</th>
+		          <th style="width:9em">单卡单笔消费上限（元）</th>
+		          <th style="width:9em">单卡每日消费上限（元）</th>
+		          <th style="width:9em">总限额累计上限（元）</th>
+		      </tr>
+		  </thead>
+		  <tbody>
+		      <tr>
+		      	<td><span>北京农商行</span></td>
+		      	<td>普通</td>
+		      	<td>北京</td>
+		      	<td>借记卡</td>
+		      	<td>
+		      		<div>手机验证客户</div>
+		      		<div>证书验证客户</div>
+		      	</td>
+		      	<td>
+		      		<div>10万</div>
+		      		<div>20万</div>
+		      	</td>
+		      	<td>
+		      		<div>50万</div>
+		      		<div>100万</div>	
+		      	</td>
+		      	<td>
+		      		<div>无限额</div>
+		      		<div>无限额</div>	
+		      	</td>
+		      </tr>
+		      <tr>
+		      	<td>北京银行</td>
+		      	<td>普通</td>
+		      	<td>全国</td>
+		      	<td>借记卡</td>
+		      	<td>
+		      		<div>普通</div>
+		      		<div>动态密码</div>	
+		      		<div>证书</div>	
+		      	</td>
+		      	<td>
+		      		<div>300</div>
+		      		<div>1,000</div>	
+		      		<div>100万</div>	
+		      	</td>
+		      	<td>
+		      		<div>300</div>
+		      		<div>5,000</div>	
+		      		<div>100万</div>	
+		      	</td>
+		      	<td>
+		      		<div>300</div>
+		      		<div>无限额</div>	
+		      		<div>无限额</div>	
+		      	</td>
+		      </tr>
+		      <tr>
+		      	<td>广发</td>
+		      	<td>普通</td>
+		      	<td>全国</td>
+		      	<td>借记卡</td>
+		      	<td>
+		      		<div class="hl-y">USBkey </div>
+		      		<div>动态口令</div>
+		      		<div class="hl-y">key令</div>
+		      	</td>
+		      	<td>
+		      		<div class="hl-y">5,000</div>
+		      		<div>5,000</div>
+		      		<div class="hl-y">5,000</div>
+		      	</td>
+		      	<td>
+		      		<div class="hl-y">5,000</div>
+		      		<div>5,000</div>
+		      		<div class="hl-y">5,000</div>
+		      	</td>
+		      	<td>
+		      		<div>无</div>
+		      		<div>无</div>
+		      		<div>无</div>
+		      	</td>
+		      </tr>
+		      <tr>
+		      	<td>平安</td>
+		      	<td>普通</td>
+		      	<td>全国</td>
+		      	<td>借记卡</td>
+		      	<td>
+		      		<div>USBkey</div>
+		      		<div>动态口令</div>
+		      	</td>
+		      	<td>
+		      		<div>50,000</div>
+		      		<div>50,000</div>
+		      	</td>
+		      	<td>
+		      		<div>50,000</div>
+		      		<div>50,000</div>
+		      	</td>
+		      	<td>
+		      		<div>无</div>
+		      		<div>无</div>
+		      	</td>
+		      </tr>
+
+		      <tr>
+		      	<td>招行</td>
+		      	<td>普通</td>
+		      	<td>全国</td>
+		      	<td>借记卡</td>
+		      	<td>
+		      		<div>USBkey</div>
+		      		<div>大众版</div>
+		      	</td>
+		      	<td>
+		      		<div>无</div>
+		      		<div>5,000</div>
+		      	</td>
+		      	<td>
+		        	<div>无</div>
+		      		<div></div>
+		      	</td>
+		      	<td>
+		        	<div>无</div>
+		      		<div></div>
+		      	</td>
+		      </tr>
+		      <tr>
+		      	<td>工行</td>
+		      	<td>普通</td>
+		      	<td>全国</td>
+		      	<td>借记卡</td>
+		      	<td>
+		      		<div>申请口令卡和USBKEY</div>
+		      		<div>E支付</div>
+		      		<div>手机短信认证网上银行口令卡</div>
+		      		<div>未认证的网上银行口令卡</div>
+		      		<div>电子密码器</div>
+		      		<div>一代U盾（无手机验证）</div>
+		      		<div>一代U盾（手机验证）</div>
+		      		<div>二代U盾</div>
+		      	</td>
+		      	<td>
+		      		<div>300</div>
+		      		<div>1000</div>
+		      		<div>2000</div>
+		      		<div>500</div>
+		      		<div>50万</div>
+		      		<div>50万</div>
+		      		<div>100万</div>
+		      		<div>100万</div>
+		      	</td>
+		      	<td>
+		      		<div>300</div>
+		      		<div>1000</div>
+		      		<div>5000</div>
+		      		<div>1000</div>
+		      		<div>100万</div>
+		      		<div>100万</div>
+		      		<div>100万</div>
+		      		<div>100万</div>
+		      	</td>
+		      	<td>
+		      		<div>300</div>
+		      		<div>无</div>
+		      		<div>无</div>
+		      		<div>无</div>
+		      		<div>无</div>
+		      		<div>无</div>
+		      		<div>无</div>
+		      		<div>无</div>
+		      	</td>
+		      </tr>
+		      <tr>
+		      	<td>光大</td>
+		      	<td></td>
+		      	<td>全国</td>
+		      	<td>阳光借记卡</td>
+		      	<td>
+		      		<div>动态密码</div>
+		      		<div>阳光令牌</div>
+		      		<div>PUSH支付</div>
+		      	</td>
+		      	<td>
+		      		<div>1万元</div>
+		      		<div>50万元</div>
+		      		<div>1万元</div>
+		      	</td>
+		      	<td>
+		      		<div>1万元</div>
+		      		<div>50万元</div>
+		      		<div>1万元</div>
+		      	</td>
+		      	<td>
+		      		<div>无限额</div>
+		      		<div>无限额</div>
+		      		<div>无限额</div>
+		      	</td>
+		      </tr>
+		      <tr>
+		      	<td>民生银行</td>
+		      	<td>普通</td>
+		      	<td>全国</td>
+		      	<td>借记卡</td>
+		      	<td>
+		      		<div>大众版（短信验证码）</div>
+		      		<div>大众版（浏览器证书）</div>
+		      		<div>贵宾版（U宝）</div>
+		      		<div>贵宾版（OTP）</div>
+		      	</td>
+		      	<td>
+		      		<div>5000</div>
+		      		<div>5000</div>
+		      		<div>50万</div>
+		      		<div>50万</div>
+		      	</td>
+		      	<td colspan="2">
+		      		<div>5000</div>
+		      		<div>5000</div>
+		      		<div>50万</div>
+		      		<div>50万</div>
+		      	</td>
+		      </tr>
+
+		      <tr>
+		      	<td>中行</td>
+		      	<td>普通</td>
+		      	<td></td>
+		      	<td>借记卡</td>
+		      	<td>中国银行动态口令</td>
+		      	<td>50000</td>
+		      	<td>10000000</td>
+		      	<td>无</td>
+		      </tr>
+
+		      <tr>
+		      	<td>邮政</td>
+		      	<td>普通</td>
+		      	<td>全国</td>
+		      	<td>借记卡</td>
+		      	<td>
+		      		<div>XXUSBkey </div>
+		      		<div>XX动态口令</div>
+		      		<div>电子令牌</div>
+		      	</td>
+		      	<td>
+		      		<div>2000000</div>
+		      		<div>10000</div>
+		      		<div>200000</div>
+		      	</td>
+		      	<td>
+		      		<div>2000000</div>
+		      		<div>10000</div>
+		      		<div>200000</div>
+		      	</td>
+		      	<td>
+		      		<div>无</div>
+		      		<div>无</div>
+		      		<div>无</div>
+		      	</td>
+		      </tr>
+		      <tr>
+		      	<td>中信</td>
+		      	<td>普通</td>
+		      	<td>全国</td>
+		      	<td>借记卡</td>
+		      	<td>
+		      		<div>动态口令</div>
+		      		<div>USBKey</div>
+		      	</td>
+		      	<td>
+		      		<div>1000</div>
+		      		<div>1000000</div>
+		      	</td>
+		      	<td>
+		      		<div>5000</div>
+		      		<div>1000000</div>
+		      	</td>
+		      	<td>
+		      		<div>无</div>
+		      		<div>无</div>
+		      	</td>
+		      </tr>   
+
+		      <tr>
+		      	<td>农行</td>
+		      	<td>普通</td>
+		      	<td>全国</td>
+		      	<td>借记卡</td>
+		      	<td>
+		      		<div>一代K宝</div>
+		      		<div>二代K宝</div>
+		       		<div>动态口令卡</div>
+		      		<div>K码支付</div>
+		      	</td>
+		      	<td>
+		      		<div>50万</div>
+		      		<div>100万</div>
+		      		<div>1000</div>
+		      		<div>1000</div>
+		      	</td>
+		      	<td>
+		      		<div>100万</div>
+		      		<div>500万</div>
+		     		<div>1000</div>
+		      		<div>3000</div>
+		      	</td>
+		      	<td>
+		      		<div>无限额</div>
+		      		<div>无限额</div>
+		     		<div>无限额</div>
+		      		<div>无限额</div>
+		      	</td>
+		      </tr>   
+
+		      <tr>
+		      	<td>交行</td>
+		      	<td>普通</td>
+		      	<td>全国</td>
+		      	<td>借记卡</td>
+		      	<td>
+		      		<div>USBkey（证书认证版）</div>
+		      		<div>手机动态密码</div>
+		      	</td>
+		      	<td>
+		      		<div>1000000</div>
+		      		<div>50000</div>
+		      	</td>
+		      	<td>
+		      		<div>1000000</div>
+		      		<div>50000</div>
+		      	</td>
+		      	<td>
+		      		<div>无</div>
+		      		<div>无</div>
+		      	</td>
+		      </tr>   
+
+		      <tr>
+		      	<td>建行</td>
+		      	<td>普通</td>
+		      	<td>全国</td>
+		      	<td>
+		      		<div>签约的借记卡</div>
+		      		<div>非签约的借记卡 </div>
+		      	</td>
+		      	<td>
+		      		<div  class="hl-r">全部（签约）</div>
+		      		<div>动态口令卡（刮刮卡）</div>
+		      		<div>短信动态口令</div>
+		      		<div>文件证书</div>
+		      		<div  class="hl-r">二代网银盾</div>
+		      		<div>文件证书+刮刮卡</div>
+		      		<div  class="hl-r">USB Key+动态口令卡	</div>
+		      		<div  class="hl-r">网银高端版</div>
+		      		<div  class="hl-r">USB Key+短信动态口令</div>
+		      		<div>刮刮卡+短信动态口令</div>
+		      		<div  class="hl-r">USB Key+短信确认</div>
+		      		<div>USB Key</div>
+		      		<div  class="hl-r">音频盾</div>
+		      		<div>非签约</div>
+		      	</td>
+		      	<td>
+		      		<div class="hl-r">50000</div>
+		      		<div>5000</div>
+		      		<div>5000</div>
+		      		<div>0</div>
+		      		<div class="hl-r">500000</div>
+		      		<div>5000</div>
+		      		<div class="hl-r">500000</div>
+		      		<div class="hl-r">500000</div>
+		      		<div class="hl-r">500000</div>
+		      		<div>5000</div>
+		      		<div class="hl-r">500000</div>
+		      		<div>50000</div>
+		      		<div class="hl-r">500000</div>
+		      		<div>0</div>
+		      	</td>
+		      	<td>
+		      		<div class="hl-r">500000</div>
+		      		<div>5000</div>
+		      		<div>5000</div>
+		      		<div>0</div>
+		      		<div class="hl-r">500000</div>
+		      		<div>5000</div>
+		      		<div class="hl-r">500000</div>
+		      		<div class="hl-r">500000</div>
+		      		<div class="hl-r">500000</div>
+		            <div>5000</div>
+		            <div class="hl-r">500000</div>
+		            <div>100000</div>
+		            <div class="hl-r">500000</div>
+		            <div>0</div>
+		      	</td>
+		      	<td>无</td>
+		      </tr>   
+		  </tbody>
+		</table>
+		</div>
+	    </div>
+	</div>
+  </section>
+</article>
+
+</body>
+</html>

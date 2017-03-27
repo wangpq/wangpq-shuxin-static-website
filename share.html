@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>分享</title>
+  <meta charset="utf-8">
+  <meta name="keywords" content="金融，社交，信用，熟信，借贷，征信，理财，贷款">
+  <meta name="description" content="熟信--首款社交金融应用。信用好不好，熟人知道，熟信知道。下载熟信，对熟人匿名授信，也可查询自己、熟人信用。">
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  
+  <!-- Set render engine for 360 browser -->
+  <meta name="renderer" content="webkit">
+  <!-- No Baidu Siteapp-->
+  <meta http-equiv="Cache-Control" content="no-siteapp"/>
+  <meta name="apple-itunes-app" content="app-id=955361348">
+  <link rel="icon" type="image/png" href="http://www.ishuxin.cn/images/favicon.png">
+
+  <!-- Add to homescreen for Chrome on Android -->
+  <meta name="mobile-web-app-capable" content="yes">
+
+  <!-- Add to homescreen for Safari on iOS -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="shuxin UI">
+
+  <!-- Tile icon for Win8 (144x144 + tile color) -->
+  <meta name="msapplication-TileImage" content="http://www.ishuxin.cn/images/favicon.png">
+  <meta name="msapplication-TileColor" content="#0e90d2">
+
+  <!-- 使用的CSS -->
+
+  <link rel="stylesheet" href="css/share.css">
+
+  <script>
+ ////////////////////////////////////
+var FrilendUi={};
+FrilendUi.format=function(str, step, splitor){
+  str = str.toString();
+  var len = str.length;
+  if(len > step) {
+     var l1 = len%step,
+       l2 = parseInt(len/step),
+       arr = [],
+       first = str.substr(0, l1);
+     if(first != '') {
+       arr.push(first);
+     };
+     for(var i=0; i<l2 ; i++) {
+       arr.push(str.substr(l1 + i*step, step));                                   
+     };
+     str = arr.join(splitor);
+  };
+  return str;
+}
+//格式化可能带有小数点的数字
+FrilendUi.floatFormat=function(num){
+  var shu=num;
+  if(num.indexOf(".")>-1){
+    var m=num.split(".")[0];
+    var n=num.split(".")[1];
+    shu=this.format(m, 3, ',')+'.'+n;
+  }else{
+    shu=this.format(num, 3, ',')
+  }
+  return shu;
+}
+
+
+window.onload=function(){
+  var strong=document.querySelector("#money");
+  strong.innerHTML=FrilendUi.floatFormat(strong.innerHTML);
+}
+
+
+  </script>
+</head>
+<body>
+
+<!--授信详情-->
+<section class="details">
+  <!--授信详情左侧内容-->
+  <div class="info">
+    <dl>
+      <div class="banyuan"></div>
+      <dt>
+        <span class="circle"></span>
+        <span class="person"></span>
+        <h2>我在熟信被<strong>3</strong>位好友授信<strong>￥</strong><strong id="money">20300451</strong></h2>
+        <p>排名第<span class="rank">1</span></p>
+        <div class="line"></div>
+      </dt>
+      <dd>
+     <div class="bar">
+       <div class="top">
+        <span class="num">6人</span>
+        <span class="j"></span>
+      </div>
+       <div class="box">
+         <div class="tiao" style="height:80px;"></div>
+       </div>
+       <div class="text">300元</div>
+     </div>
+
+     <div class="bar">
+       <div class="top">
+        <span class="num">10人</span>
+        <span class="j"></span>
+      </div>
+       <div class="box">
+         <div class="tiao"></div>
+       </div>
+       <div class="text">1K元</div>
+     </div>
+
+     <div class="bar">
+       <div class="top">
+        <span class="num">6人</span>
+        <span class="j"></span>
+      </div>
+       <div class="box">
+         <div class="tiao" style="height:120px;"></div>
+       </div>
+       <div class="text">3K元</div>
+     </div>
+
+     <div class="bar">
+       <div class="top">
+        <span class="num">8人</span>
+        <span class="j"></span>
+      </div>
+       <div class="box">
+         <div class="tiao" style="height:140px;"></div>
+       </div>
+       <div class="text">10K元</div>
+     </div>
+
+     <div class="bar">
+       <div class="top">
+        <span class="num">1人</span>
+        <span class="j"></span>
+      </div>
+       <div class="box">
+         <div class="tiao" style="height:20px;"></div>
+       </div>
+       <div class="text">30K元</div>
+     </div> 
+     <div class="bar">
+       <div class="top">
+        <span class="num">0人</span>
+        <span class="j"></span>
+      </div>
+       <div class="box" style="height:0;">
+         <div class="tiao" style="height:0;"></div>
+       </div>
+       <div class="text">80K元</div>
+     </div> 
+
+
+      </dd>
+    </dl>
+  </div>
+</section>
+<div class="yanshe"></div>
+
+
+</body>
+</html>

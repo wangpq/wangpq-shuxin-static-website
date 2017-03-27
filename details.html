@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>授信详情</title>
+  <meta charset="utf-8">
+  <meta name="keywords" content="金融，社交，信用，熟信，借贷，征信，理财，贷款">
+  <meta name="description" content="熟信--首款社交金融应用。信用好不好，熟人知道，熟信知道。下载熟信，对熟人匿名授信，也可查询自己、熟人信用。">
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  
+  <!-- Set render engine for 360 browser -->
+  <meta name="renderer" content="webkit">
+  <!-- No Baidu Siteapp-->
+  <meta http-equiv="Cache-Control" content="no-siteapp"/>
+  <meta name="apple-itunes-app" content="app-id=955361348">
+  <link rel="icon" type="image/png" href="http://www.ishuxin.cn/images/favicon.png">
+
+  <!-- Add to homescreen for Chrome on Android -->
+  <meta name="mobile-web-app-capable" content="yes">
+
+  <!-- Add to homescreen for Safari on iOS -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="shuxin UI">
+
+  <!-- Tile icon for Win8 (144x144 + tile color) -->
+  <meta name="msapplication-TileImage" content="http://www.ishuxin.cn/images/favicon.png">
+  <meta name="msapplication-TileColor" content="#0e90d2">
+
+  <!-- 使用的CSS -->
+  <link rel="stylesheet" href="css/amaze/amazeui.css">
+  <link rel="stylesheet" href="css/public.css">
+  <link rel="stylesheet" href="css/details.css">
+  <!-- 使用的JS -->
+  <script src="js/jquery/jquery-2.0.3.min.js"></script>
+  <script src="js/amaze/amazeui.min.js"></script>
+  <script src="js/jquery.sx.common.js"></script>
+  <script src="js/jquery.qrcode.min.js"></script>
+  <script src="js/mustache.min.js"></script>
+  <script>
+  var DetailsUI={};
+  DetailsUI.init=function(){
+
+      var h2=document.querySelector("dt h2");
+      var dd=document.querySelector("dd");
+
+      h2.innerHTML='';
+      dd.innerHTML='';
+
+      var search=window.location.search;
+      var phone=search.split("=")[1];
+      
+      var data={"totalLimit":20300,"rankList":[{"accountId":2,"sum":1,"account":"300 "},{"accountId":3,"sum":0,"account":"1K "},{"accountId":4,"sum":0,"account":"3K "},{"accountId":5,"sum":2,"account":"10K "},{"accountId":6,"sum":0,"account":"30K "},{"accountId":7,"sum":0,"account":"80K"}],"totalCount":3,"status":"success"};
+ 
+      doAjax(data);
+      DetailsUI.share(data);
+
+
+
+      //处理柱状图
+      function autoBarHeight(el,data){
+        var bars=el.querySelectorAll(".bar");
+
+        var rankList=data.rankList;
+        var length=rankList.length;
+        var total=0;
+        for(var i=0;i<length;i++){
+           var item=rankList[i];
+           var num=parseInt(item.sum);
+           total+=num;
+        }
+        for(var i=0;i<length;i++){
+           var bar=bars[i];
+           var box=bar.querySelector(".box");
+           var tiao=box.querySelector(".tiao");
+           var tiaoValue=280*parseInt(rankList[i].sum)/parseInt(total);
+           if(tiaoValue>0){
+              tiao.style.height=tiaoValue+'px'
+           }else{
+              tiao.style.height=0;
+              box.style.height=0;
+              box.style.marginBottom=0;
+           }
+        }
+      }
+
+      //AJAX成功返回执行函数
+      function doAjax(data){
+        debugger
+          if(data.status=="success"){
+
+            if(!!data.message){
+               h2.innerHTML=data.message;
+               //return;
+            }
+
+            var h2Tpl='已被<strong>{{totalCount}}</strong>位好友授信<strong>￥</strong><strong>{{totalLimit}}</strong>';
+            var barTpl=
+               '{{#rankList}}'+
+
+               '<div class="bar" id="{{accountId}}">'+
+                 '<div class="top">'+
+                  '<span class="num">{{sum}}人</span>'+
+                  '<span class="j"></span>'+
+                '</div>'+
+                 '<div class="box">'+
+                   '<div class="tiao"></div>'+
+                 '</div>'+
+                 '<div class="text">{{account}}</div>'+
+               '</div>'+
+               '{{/rankList}}';
+            h2.innerHTML=Mustache.render(h2Tpl, data);
+            dd.innerHTML=Mustache.render(barTpl, data);
+
+            //处理数字格式
+
+            var totalLimit=$(".details h2 strong").eq(2);
+   
+            totalLimit.html(  FrilendUi.floatFormat( $.trim( totalLimit.text() ) )  );
+
+            autoBarHeight(document.querySelector("dd"),data);
+          }else{
+             h2.innerHTML=data.message;
+          }
+      }
+  }
+
+  //分享
+  DetailsUI.share=function(data){
+      if(data.status=="success"){
+        if(!!data.message){
+        }
+        var appkey="65AxoA";
+        var default_text='我被'+data.totalCount+'位熟人共授信'+data.totalLimit+'元!安装熟信，查查你的信用吧~ http://t.cn/RZciLYv';
+        var pic="http://www.ishuxin.cn/images/logo.png";
+        var addition="simple";
+        var type="icon";
+        var picture_search="false";
+        var ralateUid="5215554044";
+        var wb_language = "zh_cn";
+        var weibo_url = "http://service.weibo.com/share/share.php?url=http://t.cn/RZciLYv&appkey="+appkey+"&searchPic=false&title="+encodeURI(default_text)+"&pic="+encodeURI(pic)+"&ralateUid="+ralateUid+"&language="+wb_language;
+
+        var btnWeiBo=$("#weibo");
+        var btnWeiXin=$("#weixin");
+        var wxBox=$(".wx-box");
+        btnWeiBo.attr("href",weibo_url);
+        wxBox.css({
+          "left":btnWeiXin.offset().left-wxBox.outerWidth()/2+24,
+          "top":btnWeiXin.offset().top-wxBox.outerHeight()-10
+        })
+
+        btnWeiXin.on("click",function(){
+          wxBox.fadeIn();
+        })
+
+        $(".wx-box .btn-close").on("click",function(){
+          wxBox.fadeOut();
+        })
+
+        $('.wx-box #weixin-img').qrcode({width: 200, height: 200, text:document.URL});
+      }else{
+        $(".share-box").hide();
+        $(".zhanwei").show();
+      }
+  }
+
+  $(function(){ 
+       DetailsUI.init();
+  })
+
+  </script>
+</head>
+<body>
+
+<!-- 页头 -->
+<div class="header">
+<header class="am-topbar admin-header">
+  <div class="wrap">
+  <div class="am-topbar-brand">
+    <a href="index.html">熟信---熟人匿名借贷，让借贷更体面</a>
+  </div>
+  <button class="am-topbar-btn am-topbar-toggle am-btn am-btn-sm  am-show-sm-only" data-am-collapse="{target: '#topbar-collapse'}">
+    <span class="am-sr-only">导航切换</span>
+    <span class="am-icon-bars"></span>
+  </button>
+  <div class="am-collapse am-topbar-collapse" id="topbar-collapse">
+    <ul class="am-nav am-nav-pills am-topbar-nav am-topbar-right admin-header-list">
+      <li>
+        <a href="index.html" target="_parent">首页 </a>
+      </li>
+      <li>
+        <a href="creditenquiry.html" target="_parent">信用查询 </a>
+      </li>
+      <li>
+        <a href="ambw.html" target="_parent">匿名借贷 </a>
+      </li>
+      <li>
+        <a href="security.html" target="_parent">资金安全 </a>
+      </li>
+      <li>
+        <a href="download.html" target="_parent">下载 </a>
+      </li>
+    </ul>
+  </div>
+  </div>
+</header>
+</div>
+  <script>
+    $(function(){
+       // 应用头部headerFixed 文件
+       $("header.am-topbar").headerFixed();         
+    })
+  </script>
+
+  
+<!--授信详情-->
+<section class="details">
+  <!--授信详情左侧内容-->
+  <div class="info">
+    <dl>
+      <div class="banyuan"></div>
+      <dt>
+        <span class="circle"></span>
+        <span class="person"></span>
+        <h2></h2>
+        <div class="line"></div>
+      </dt>
+      <dd></dd>
+    </dl>
+  </div>
+</section>
+
+<!-- 分享模块 -->
+<section class="share-box">
+  <p>
+    <span>分享到</span>
+    <a href="javascript:void(0);" id="weixin" class="am-icon-wechat"></a>
+    <a href="javascript:void(0);" id="weibo" class="am-icon-weibo" target="_blank"></a>
+  </p>
+</section>
+
+<!-- 分享弹出框 -->
+<section class="wx-box">
+  <div class="hd">
+    <span>分享到微信朋友圈</span>
+    <a href="javascript:void(0);" class="btn-close">×</a>
+  </div>
+  <div class="bd" id="weixin-img">
+  </div>
+  <div class="ft">
+    <p>打开微信，点击底部的“发现”，<br>使用“扫一扫”即可将网页分享至朋友圈。</p>
+  </div>
+</section>
+<section class="zhanwei"></section>
+
+<!-- 页脚 -->
+<footer>
+  <div id="top" class="clx">
+    <dl>
+      <dt>关于我们</dt>
+      <dd>
+        <a href="frilendStory.html" target="_blank">熟信故事</a>
+        <a href="contactUs.html" target="_blank">联系我们</a>
+        <a href="joinUs.html" target="_blank">招聘信息</a>
+      </dd>
+    </dl>
+    <dl>
+      <dt>法律声明</dt>
+      <dd>
+        <a href="userAgreement.html" target="_blank">用户协议</a>
+        <a href="lendingAgreement.html" target="_blank">借贷协议</a>
+        <a href="cost.html" target="_blank">费用说明</a>
+      </dd>
+    </dl>
+    <dl>
+      <dt>友情链接</dt>
+      <dd>
+        <a href="http://www.zhonglun.com/cn/index.aspx" target="_blank">中伦律师事务所</a>
+        <a href="http://www.yeepay.com/" target="_blank">易宝支付</a>
+        <a href="http://www.pku.edu.cn/" target="_blank">北京大学</a>
+      </dd>
+    </dl>
+    <dl>
+      <dt>常见问题</dt>
+      <dd>
+        <a href="anypcp.html" target="_blank">匿名原理</a>
+        <a href="aboutAssurance.html" target="_blank">关于担保</a>
+        <a href="collectionflow.html" target="_blank">催收流程</a>
+      </dd>
+    </dl>
+    <div id="info">
+      <p>
+        <a class="icon am-icon-wechat" href="http://weixin.qq.com/r/HnUqMgbE0lutrUJR9yAM" target="_blank"></a>
+        <a class="icon am-icon-weibo" href="http://www.weibo.com/u/5215554044" target="_blank"></a>
+      </p> 
+      <p class="hot-tell">400-050-1024</p>
+      <p>周一至周六10:00-21:00(仅收市话费)</p>
+    </div>
+   </div>
+
+   <div class="copyright">
+       <p>京 ICP 备 15002635 号 www.ishuxin.cn 2014-2015  &copy All Rights Reserved</p>
+   </div>
+</footer>
+
+</body>
+</html>

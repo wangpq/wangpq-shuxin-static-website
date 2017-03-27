@@ -1,0 +1,75 @@
+﻿/**
+ * article.css file for article.html
+ * Released under the MIT license
+ * http://www.ishuxin.cn/license
+ * Author : Wangpq;
+ * Date: 2015-04-23T20:00Z
+ */
+body{
+	background-color: #fcfcfc;
+	margin:0;
+	padding:0;
+}
+article{
+	background-color: #fcfcfc;
+	margin:0;
+	padding:0 15px;
+	max-width:1150px;
+	margin:0 auto;
+}
+article .wrap{
+	max-width:1150px;
+	margin:0 auto;
+	z-index:12;
+	position: relative;
+}
+article .content{
+    padding:0;
+    margin:0;
+}
+article h3{
+	font-size:1.713em;
+	font-weight: normal;
+	margin-bottom:10px;
+	margin-top:40px;
+}
+article  h4{
+	color: #111;
+	font-size: 16px;
+	font-weight: normal;
+	margin-bottom: 16px;
+	color:#b28a00;
+}
+article  p{
+	line-height: 36px;
+	color:#646464;
+	margin-top:0;
+	margin-bottom:4px;
+	font-size: 16px;
+	text-indent: 2em;
+}
+article  p img{
+	display: block;
+	margin:0 auto;
+	max-width:100%;
+	max-height:240px;
+}
+article.art{background: none;}
+article.art h3{position: relative;}
+article.art h3 span.title{
+	background: #FCFCFC;
+	display: inline-block;
+	padding-right:0.5em;
+	position: relative;
+	z-index:10;
+}
+article.art h3 span.line{
+	display: block;
+	position: absolute;
+	right:0;
+	left:2em;
+	top:50%;
+	height: 1px;
+	background-color: #DEDEDF;
+	z-index:9;
+}

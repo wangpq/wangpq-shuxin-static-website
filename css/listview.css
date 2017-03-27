@@ -1,0 +1,257 @@
+﻿/**
+ * listview css file for listview page
+ * Released under the MIT license
+ * http://www.ishuxin.cn/license
+ * Author : Wangpq;
+ * Date: 2015-04-29T11:00Z
+ */
+#sx-hfg{
+	margin:0 auto 40px;
+	max-width:1150px;
+}
+.am-breadcrumb{
+	padding:28px 15px 22px;
+	margin:0;
+}
+.am-breadcrumb li {
+    font-size:15px;
+    margin-left:4px;
+}
+.am-breadcrumb > li + li:before{
+	content: "";
+	padding: 0;
+	color: #f00;
+	font-weight: bold;
+}
+
+.sx-pagination{
+	position: relative;
+	height: 32px;
+}
+.sx-pagination .sx-pagination-prev,
+.sx-pagination .sx-pagination-next{
+	font-size:24px;
+	background: none!important;
+	display:block;
+	width: 32px;
+	height: 32px;
+	line-height: 32px;
+	text-align: center;
+	color:#333!important;
+}
+.sx-pagination .sx-pagination-prev{
+	float: left;
+}
+.sx-pagination .sx-pagination-next{
+	float: right;
+}
+.sx-pagination a,
+.sx-pagination a:visited{
+	font-size: 1.2em;
+	color: #f00!important;
+	background-color: transparent!important;
+	outline:none;
+}
+.sx-pagination a:hover,
+.sx-pagination a:active{
+	background-color: #f0f0f0!important;
+}
+.sx-pagination select{
+	background: none;
+	width: 80px;
+	padding-left:10px;
+	text-align: center;
+	margin-left: -40px;
+	border-radius: 2px;
+	display: block;
+	border: 0;
+	line-height: 32px;
+	height: 32px;
+	border-radius: 2px;
+	color: #555555;
+	-webkit-appearance: none;
+	   -moz-appearance: none;
+	        appearance: none;
+	position: absolute;
+	top: 0;
+	left: 50%;
+}
+.sx-pagination select option{
+   text-align: left;
+   font-size:18px;
+}
+.sx-pagination .sx-btn-disabled{
+   color:#ccc!important;
+   cursor:default!important;
+}
+#sx-pagination-1{ display: block;}
+#sx-pagination-2{ display: none;}
+
+/**
+ * 借贷过程图
+ */
+.hot-figrue{
+	overflow:hidden;
+	max-width:1180px;  
+    margin-bottom:45px;
+    padding-left:15px;
+    padding-right:15px;
+}
+.hot-figrue .box{
+	padding-left:0;
+	padding-right:0;
+}
+.hot-figrue .box:first-child{
+	padding-right:15px;
+}
+.hot-figrue .box:last-child{
+	padding-left:15px;
+	padding-right:0;
+}
+.sx-panel{
+	border: 1px solid #e2e1e0;
+}
+.sx-panel dt{
+    padding:21px 28px;
+	color:#287fda;
+	font-size:1.2em;
+	font-weight: normal;
+	border-bottom: 1px solid #e2e1e0;
+}
+.sx-panel dt .icon{
+	margin-left:-2px;
+	margin-right:6px;
+	font-size:24px;
+}
+.sx-panel dt .text{
+	vertical-align:middle;
+}
+.sx-panel dt .sx-more{
+	float: right;
+	margin-top:2px;
+	color:#287fda;
+}
+.sx-panel dd{
+	margin-top:0;
+	padding:0;
+	background-color: #fff;
+}
+.sx-panel dd .sx-table-body{
+	padding-left:0;
+	padding-right:0;
+}
+.sx-panel table{
+	margin-bottom:0;
+}
+.sx-panel table thead{
+	margin-left:-18px;
+	margin-right:-18px;
+}
+.sx-panel table tr th{
+	font-size:1.2em;
+	line-height:1.48em;
+	padding:16px 12px;
+	text-align: center;
+	font-weight: normal;
+	border-bottom-width: 1px;
+}
+.sx-panel table tr td{
+	font-size:1.2em;
+	padding:0 12px;
+	line-height: 60px;
+	text-align: center;
+	color:#45637e;
+}
+.sx-panel tbody{
+	max-height:10px;
+}
+.sx-panel tbody td{
+	font-size:20px!important;
+	font-family: Arial;
+	color:#45637e!important;
+}
+.sx-panel tbody tr,
+.sx-panel tbody tr:visited{
+    background-color: none;
+}
+.sx-panel tbody tr:hover,
+.sx-panel tbody tr:active{
+    background-color: #FCFCFC;
+    cursor:pointer;
+}
+.sx-panel tbody tr:hover td,
+.sx-panel tbody tr:active td{
+    color: #45637e;
+}
+.sx-panel tbody tr td:first-child{
+	color:#ef6c00;
+	font-size:26px;
+}
+.sx-panel tbody tr td:first-of-type,
+.sx-panel tbody tr td:last-of-type{
+	border-top: 1px solid transparent;
+	width: 20px;
+}
+.sx-panel tbody tr td:nth-of-type(2) {
+	color: #ef6c00!important;
+	font-size: 26px!important;
+}
+#sx-pagination-0{ display: block;margin-top:12px;margin-bottom:25px;}
+#sx-pagination-1{ display: none; }
+@media only screen and (max-width: 640px) {
+	.hot-figrue .box:first-child{padding-right:0;}
+	.hot-figrue .box:last-child{padding-left:0;}
+	#sx-pagination-0{display: none;}
+	#sx-pagination-1{display: block;}
+}
+
+/* 自定义分页UI*/
+.sx-pager{
+	display: block;
+	text-align: center;
+	vertical-align:middle;
+} 
+.sx-pager a,
+.sx-pager a:visited,
+.sx-pager span{
+	display: inline-block;
+	margin:0 4px;
+	border-radius: 50%;
+	border: none;
+	width: 32px;
+	height: 32px;
+	line-height: 32px;
+	text-align: center;
+	padding: 0;
+	font-size: 1.2em;
+	color: #464542;
+} 
+.sx-pager a:hover,
+.sx-pager a:active,
+.sx-pager span{
+	background-color: #f0f0f0;
+} 
+.sx-pager .btn-active{
+	background-color: #789bd1!important;
+	color:#fff;
+} 
+.sx-pager .btn-prev,
+.sx-pager .btn-next{
+	display: inline-block;
+	border-radius: 50%;
+	border: none;
+	width: 32px;
+	height: 32px;
+	line-height: 32px;
+	text-align: center;
+	padding: 0;
+	font-size: 28px;
+	color: #464542;
+	text-align: center;
+	vertical-align:top;
+} 
+.sx-pager .btn-prev.btn-active,
+.sx-pager .btn-next.btn-active{
+	background: #eee!important;
+	color:#ccc!important;
+} 

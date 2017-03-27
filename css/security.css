@@ -1,0 +1,195 @@
+﻿/**
+ * security css file for security page
+ * Released under the MIT license
+ * http://www.ishuxin.cn/license
+ * Author : Wangpq;
+ * Date: 2015-04-30T15:00Z
+ */
+body{background: #fff;}
+/* 流程图 */
+#workflow{
+   margin:0 auto;
+   background-color: #f4f6f7;
+}
+.wf-box{
+   margin:0 auto;
+   max-width:1180px;
+   padding:36px 15px 18px;
+}
+.wf{
+   padding:0;
+}
+.wf .bd{display: table;}
+.wf h2{
+	color:#eb694f;
+	font-weight: bold;
+	font-size:16px;
+	margin-bottom:12px;
+}
+.wf .bd{
+   margin-bottom:30px;
+}
+.wf p{
+	position: relative;
+	display: table-row;
+}
+.wf p.text{
+	height: 31px;
+	margin-bottom:0;
+	margin-top:0;
+	padding:0;
+}
+.wf p.text label{
+	display: table-cell;
+	margin:0;
+	width: 32px;
+	vertical-align: middle;
+}
+.wf p.text label i{
+   display: inline-block;
+   width: 31px;
+   height: 31px;
+   line-height: 31px;
+   background: url(../images/security/cicle-r.png) top center no-repeat;
+   vertical-align:middle;
+   text-align: center;
+   font-style:normal;
+   color:#eb694f;
+   position: relative;
+   font-weight: normal;
+} 
+.wf p.text label i:after{
+	position: absolute;
+	left: 50%;
+	top: 30px;
+	content: "";
+	display: inline-block;
+	width: 1px;
+	height: 31px;
+   background: #eb694f;
+}
+.wf p.text label i:before{
+   position: absolute;
+   left: 50%;
+   top: -31px;
+   content: "";
+   display: inline-block;
+   width: 1px;
+   height: 31px;
+   background: #eb694f;
+}
+.wf p.text:last-child label i:after{
+	display: none;
+}
+.wf p.text:first-child label i:before{
+   display: none;
+}
+.wf p span{
+   vertical-align:middle;
+   color:#575757;
+   padding:0 10px;
+   display: inline-block;
+   font-weight:600;
+} 
+.wf p.line{
+	height: auto;
+	margin-bottom:0;
+	margin-top:0;
+}
+.wf p.line label {
+   display: table-cell;
+   margin:0;
+}
+.wf p.line label i{
+   display: block;
+   width: 1px;
+   height: 29px;
+}
+.wf p.text span{
+   display: table-cell;
+   line-height: 1.5em;
+}
+.wf-b h2{
+   color:#47adb9;
+}
+.wf-b p.text{
+}
+.wf-b p.text label i{
+   background: url(../images/security/cicle-b.png) top center no-repeat;
+   color:#47adb9;
+}
+.wf-b p.text label i:after{
+   height: 80px;
+   background: #47adb9;
+}
+.wf-b p.text label i:before{
+   top: -80px;
+   height: 80px;
+   background: #47adb9;
+}
+.wf-b p.line label,
+.wf-b p.line label i{
+   height: 84px;
+}
+.wf-b .bd{ margin-bottom:0;}
+@media only screen and (max-width: 640px) {
+   .wf-box{
+      padding-bottom:42px;
+   }
+   .wf-b p.text label i:after{
+      height: 31px;
+      background: #47adb9;
+   }
+   .wf-b p.text label i:before{
+      top: -31px;
+      height: 31px;
+      background: #47adb9;
+   }
+   .wf-b p.line label,.wf-b p.line label i{
+      height: 31px;
+   }
+}
+
+/* 环节说明 */
+article{
+   margin:47px auto 0;
+   max-width: 1180px;
+   padding:0 15px 8px;
+}
+article h2{
+   color:#45637e;
+   font-size:24px;
+   font-weight: normal;
+   margin-bottom:8px;
+}
+article h6{
+   color:#575757;
+   font-size:16px;
+   padding:19px 0 10px;
+   margin-bottom:0;
+   margin-top:0;
+}
+article p{
+   color:#575757;
+   margin-top:0;
+   margin-bottom:0;
+}
+
+/* 易宝简介 */
+aside{
+	margin:36px auto 0;
+	max-width: 1180px;
+	padding:31px 15px 66px;
+	position: relative;
+   color:#575757;
+}
+aside:after{
+	position: absolute;
+	left: 15px;
+	right:15px;
+	top: 0;
+	content: "";
+	display: block;
+	height: 1px;
+	background: #f2f2f4;
+}

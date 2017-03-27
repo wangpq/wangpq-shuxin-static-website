@@ -1,0 +1,305 @@
+﻿/**
+ * details css file for details page
+ * Released under the MIT license
+ * http://www.ishuxin.cn/license
+ * Author : Wangpq;
+ * Date: 2015-05-20T10:30Z
+ */
+body{
+	background: url(../images/creditenquiry/bd-bg.jpg) top center repeat;
+	background-size: 100% auto;
+	margin：0!important；
+	padding ：0!important；
+}
+ul,li{
+	list-style:none;
+	margin:0;
+	padding:0;
+}
+
+.details{
+   margin:218px auto 0;
+   max-width:1920px;
+   width: 100%;
+   padding:0;
+   position: relative;
+}
+
+.details .info dl{
+	background-color: #ecf0f5;
+	z-index:10;
+	padding:0;
+	padding-bottom:0;
+	margin-top:68px;
+	margin-bottom:0;
+	position: relative;
+}
+.details .info dd{
+	padding:28px 5% 12px!important;
+	text-align: center;
+	max-width:1920px;
+	margin:0 auto;
+}
+.details .info dl .circle:before{
+	position: absolute;
+	left:0;
+	right:0;
+	top:-49px;
+	width:100%;
+	height: 98px;
+	content:'';
+	display: block;
+	background-color: #ecf0f5;
+	border-radius:50%;
+	z-index:9;
+}
+.details .info dl .person:before{
+	position: absolute;
+	left:0;
+	right:0;
+	top:-165px;
+	width:100%;
+	height: 138px;
+	content:'';
+	display: block;
+	background: url(../images/creditenquiry/icon-person.png) top center no-repeat;
+	border-radius:50%;
+	z-index:5;
+}
+.details h2{
+	text-align: center;
+	color:#646e76;
+	font-size:18px;
+	font-weight: normal;
+	position: relative;
+	z-index:11;
+	top:0;
+	margin-bottom:38px;
+	margin-top:0;
+}
+
+.details h2 strong{
+	color:#ef6c00;
+	font-size:28px;
+	font-weight: normal;
+}
+.details .line{
+	margin-top:16px;
+	height: 1px;
+
+background: -webkit-gradient(linear,0% 0%, 100% 100%, from(#ecf0f5), to(#ecf0f5), color-stop(0.5,#d3dbe3)); 
+background: -moz-linear-gradient(left, #ecf0f5 0%,#d3dbe3 50%, #ecf0f5 100%); 
+background: -o-linear-gradient(left, #ecf0f5 0%,#d3dbe3 50%, #ecf0f5 100%); 
+background: -ms-linear-gradient(left, #ecf0f5 0%,#d3dbe3 50%, #ecf0f5 100%); 
+background: linear-gradient(left, #ecf0f5 0%, #d3dbe3 50%,#ecf0f5 100%); 
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ecf0f5', endColorstr='#d3dbe3',GradientType=0 ); 
+}
+
+
+.bar{
+   text-align: center;
+   display: inline-block;
+   margin:0;
+   width: 15%;
+}
+.bar .top{
+	text-align: center;
+	position: relative;
+}
+.bar .num{
+	background-color: #8991bd;
+	color:#e1e3ee;
+	padding:4px 8px;
+	border-radius: 18px;
+	display: inline-block;
+	margin-bottom:10px;
+	position: relative;
+	z-index:12;
+}
+.bar .j{
+	position: absolute;
+	left:50%;
+	top:100%;
+	margin-left:-10px;
+	margin-top:-26px;
+    display: inline-block;
+	width: 20px;
+	height: 20px;
+	background-color: #8991bd;
+	border-radius: 2px;
+	z-index:10;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+.bar .box{
+   text-align: center;
+   margin-top:4px;
+   margin-bottom:4px;
+}
+.bar .box .tiao{
+	display: inline-block;
+	background-color: #34c0e2;
+	height: 180px;
+	width: 14px;
+	border-radius: 6px;
+}
+.bar .text{
+	color:#7d868d;
+}
+.details .banyuan{
+	position: absolute;
+    left:0;
+    right:0;
+    top:0;
+    height:1000px;
+    background: #ecf0f5;
+    z-index:6;
+    border-top-left-radius:50%;
+    border-top-right-radius:50%;
+    display: none;
+}
+
+@media only screen and (min-width:1000px){
+	.details h2{font-size:26px;}
+	.details h2 strong{font-size:50px;}
+	.details{
+		margin-top:50px;
+		overflow:hidden;
+	}
+	.details .info dl{
+        background: none;
+		padding-bottom:0;
+		margin-top:118px;
+	}
+	.details .info dl dt{
+       position: absolute;
+       width: 100%;
+       top:50px;
+	}
+	.details .info dl .circle:before{
+		background: none;
+	}
+   .bar{ margin:0;width: 15%;}
+   .bar .box{ margin-top:10px;margin-bottom:10px;}
+   .bar .box .tiao{width: 26px;border-radius: 13px;}
+   .bar .num{font-size:20px;font-family:STHeitiiSC Light,"宋体";padding:4px 10px;border-radius: 28px;}
+   .bar .text{font-size:26px;font-family:STHeitiiSC Light,"宋体";color:#646e76}
+   .details .line{
+	   	position: relative;
+	   	z-index:11;
+	   	width: 780px;
+	   	margin:0 auto;
+   }
+   .details .info dd{
+   	    padding-top:234px!important;
+		border-top-left-radius:50%;
+		border-top-right-radius:50%;
+		background-color:transparent;
+		position: relative;
+		z-index:10;
+		min-height:200px;
+   }
+   .details .banyuan{ display: block!important;}
+   .details .info dd{ background-color: none;}
+   footer{ position: relative;z-index:10;}
+}
+
+@media only screen and (max-width:769px){
+   .details .banyuan{display: none;}
+   .details .info dd{background-color: #ecf0f5;}
+}
+
+
+/* 分享模块 */
+.share-box{ 
+	background-color: #ecf0f5;
+	padding:20px 0 65px;
+	display: none;
+	margin:0 auto;
+	max-width:1920px;
+}
+.share-box p{ 
+	width: 824px;
+	margin:0 auto;
+	text-align: center;
+}
+.share-box span{ color:#363846;}
+.share-box a,
+.share-box span{
+	margin-left:8px;
+	vertical-align:middle;
+}
+.share-box a{ 
+  display: inline-block;
+  width: 38px;
+  height:38px ;
+  line-height: 38px;
+  border-radius: 50%;
+  text-align: center;
+  font-size:20px;
+  color:#fff;
+}
+.share-box a:first-of-type{ 
+  background-color: #60c04e;
+}
+.share-box a:last-of-type{ 
+  background-color: #e6512e;
+}
+
+.wx-box{ 
+	position: absolute;
+	padding: 10px;
+	width: 260px;
+	height: 300px;
+	background: #fff;
+	border: solid 1px #d8d8d8;
+	z-index: 11001;
+	font-size: 12px;
+	display: none;
+}
+.wx-box .hd{
+	padding: 0 10px;
+}
+.wx-box .hd span{
+	font-size: 12px;
+	font-weight: bold;
+	text-align: left;
+	line-height: 16px;
+	height: 16px;
+	position: relative;
+	color: #000;
+}
+.wx-box .hd a{
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	right: 0;
+	top: 0;
+	color: #999;
+	text-decoration: none;
+	font-size: 16px;
+}
+.wx-box .bd{
+	padding: 10px;
+	min-height: 140px;
+	text-align: center;
+}
+.wx-box .bd canvas{
+	margin:0 auto;
+	display: inline-block;
+}
+.wx-box .ft p{
+	font-size: 12px;
+	text-align: left;
+	line-height: 22px;
+	color: #666;
+	position: relative;
+	margin-top:-6px;
+}
+.zhanwei{height: 48px;display: block;background-color: #ecf0f5;}
+@media only screen and (min-width:1000px){
+   .share-box{display: block;}
+   .zhanwei{display: none;}
+}

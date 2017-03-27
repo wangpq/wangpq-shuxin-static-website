@@ -1,0 +1,259 @@
+﻿/**
+ * share css file for share page
+ * Released under the MIT license
+ * http://www.ishuxin.cn/license
+ * Author : Wangpq;
+ * Date: 2015-05-20T10:30Z
+ */
+ html{
+   font-family:  Helvetica, Arial, "Microsoft YaHei", sans-serif;
+   font-weight: normal;
+   line-height: 1.6;
+   background: url(../images/bd-bg-s.jpg) top center repeat;
+   background-size: 100% auto;
+   background-size: 100% auto;
+}
+body{ margin:0;padding:0;}
+ul,li{
+   list-style:none;
+   margin:0;
+   padding:0;
+}
+.details{
+   max-width:1920px;
+   width: 100%;
+   padding:0;
+   position: relative;
+   margin: 138px auto 0;
+   z-index:101;
+}
+
+.details .info dl{
+   background-color: #ecf0f5;
+   z-index:10;
+   padding:0;
+   padding-bottom:0;
+   margin-top:68px;
+   margin-bottom:0;
+   position: relative;
+}
+.details .info dd{
+   padding:48px 5% 24px!important;
+   text-align: center;
+   max-width:1920px;
+   margin:0 auto;
+}
+.details .info dl .circle:before{
+   position: absolute;
+   left:0;
+   right:0;
+   top:-49px;
+   width:100%;
+   height: 98px;
+   content:'';
+   display: block;
+   background-color: #ecf0f5;
+   border-radius:50%;
+   z-index:9;
+}
+.details .info dl .person:before{
+   position: absolute;
+   left:0;
+   right:0;
+   top:-108px;
+   width:100%;
+   height: 138px;
+   content:'';
+   display: block;
+   background:url(../images/icon-person-small.png) top center no-repeat;
+   background-size: auto 50%;  
+   z-index:5;
+}
+
+.details h2{
+   text-align: center;
+   font-size:18px;
+   color:#575757;
+   font-weight: normal;
+   position: relative;
+   z-index:11;
+   top:-18px;
+   margin-bottom:38px;
+   margin-top:0;
+   margin-bottom:0;
+   padding:0 1em;
+}
+
+.details h2 strong{
+   color:#ef6c00;
+   font-size:28px;
+   font-family: "Microsoft YaHei",Helvetica, Arial, sans-serif;
+   font-weight: normal;
+}
+.details .line{
+   height: 1px;
+
+background: -webkit-gradient(linear,0% 0%, 100% 100%, from(#ecf0f5), to(#ecf0f5), color-stop(0.5,#d3dbe3)); 
+background: -moz-linear-gradient(left, #ecf0f5 0%,#d3dbe3 50%, #ecf0f5 100%); 
+background: -o-linear-gradient(left, #ecf0f5 0%,#d3dbe3 50%, #ecf0f5 100%); 
+background: -ms-linear-gradient(left, #ecf0f5 0%,#d3dbe3 50%, #ecf0f5 100%); 
+background: linear-gradient(left, #ecf0f5 0%, #d3dbe3 50%,#ecf0f5 100%); 
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ecf0f5', endColorstr='#d3dbe3',GradientType=0 ); 
+}
+
+.details p{
+ color:#575757;
+ font-size:17px;
+ font-weight: normal;
+ text-align: center;
+ color:#575757;
+ margin-top:2px;
+ margin-bottom:0;
+ position: relative;
+ top:-20px;
+ z-index:1000;
+}
+.details p .rank{color:#4d78e7;font-size:20px;}
+
+.bar{
+   text-align: center;
+   display: inline-block;
+   margin:0;
+   width: 15%;
+}
+.bar .top{
+   text-align: center;
+   position: relative;
+}
+.bar .num{
+   background-color: #8991bd;
+   color:#e1e3ee;
+   padding:4px 8px;
+   border-radius: 18px;
+   display: inline-block;
+   margin-bottom:10px;
+   position: relative;
+   z-index:12;
+}
+.bar .j{
+   position: absolute;
+   left:50%;
+   top:100%;
+   margin-left:-10px;
+   margin-top:-26px;
+    display: inline-block;
+   width: 20px;
+   height: 20px;
+   background-color: #8991bd;
+   border-radius: 2px;
+   z-index:10;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+.bar .box{
+   text-align: center;
+   margin-top:4px;
+   margin-bottom:4px;
+}
+.bar .box .tiao{
+   display: inline-block;
+   background-color: #34c0e2;
+   height: 180px;
+   width: 24px;
+   border-radius: 12px;
+}
+.bar .text{
+   color:#7d868d;
+}
+.details .banyuan{
+   position: absolute;
+   left:0;
+   right:0;
+   top:0;
+   height:1000px;
+   background: #ecf0f5;
+   z-index:6;
+   border-top-left-radius:50%;
+   border-top-right-radius:50%;
+   display: none;
+}
+
+@media only screen and (min-width:1000px){
+   html{
+      background: url(../images/creditenquiry/bd-bg.jpg) top center repeat;
+   }  
+   .details h2{font-size:26px;top:0;margin-bottom:20px;padding: 0 24%;}
+   .details h2 strong{font-size:50px;}
+   .details p{font-size:24px;}
+   .details p .rank{font-size:50px;top:0;}
+   .details{
+      margin-top:50px;
+      overflow:hidden;
+   }
+   .details .info dl{
+        background: none;
+      padding-bottom:0;
+      margin-top:118px;
+   }
+   .details .info dl dt{
+       position: absolute;
+       width: 100%;
+       top:50px;
+   }
+   .details .info dl .circle:before{
+      background: none;
+   }
+   .details .info dl .person:before{
+      background: url(../images/creditenquiry/icon-person.png) top center no-repeat;
+      background-size: auto 100%;
+      top:-166px;
+   }
+
+   .bar{ margin:0;width: 15%;}
+   .bar .box{ margin-top:10px;margin-bottom:10px;}
+   .bar .box .tiao{width: 26px;border-radius: 13px;}
+   .bar .num{font-size:20px;font-family:STHeitiiSC Light,"宋体";padding:4px 10px;border-radius: 28px;}
+   .bar .text{font-size:26px;font-family:STHeitiiSC Light,"宋体";color:#646e76}
+   .details .line{
+         position: relative;
+         z-index:11;
+         width: 780px;
+         margin:30px auto 0;
+   }
+   .details .info dd{
+      padding-top:348px!important;
+      padding-bottom:48px;
+      border-top-left-radius:50%;
+      border-top-right-radius:50%;
+      background-color:transparent;
+      position: relative;
+      z-index:10;
+      min-height:200px;
+   }
+   .details .banyuan{ display: block!important;}
+   .details .info dd{ background-color: none;}
+   footer{ position: relative;z-index:10;}
+}
+
+@media only screen and (max-width:769px){
+   .details h2{font-size:18px;}
+   .details p{font-size:17px;}
+   .details h2 strong{font-size:28px;}
+   .details p .rank{font-size:28px;}
+   .bar .box .tiao{width: 18px;border-radius: 9px;}
+   .details .banyuan{display: none;}
+   .details .info dd{background-color: #ecf0f5;}
+}
+@media only screen and (max-width:480px){
+   .details h2{font-size:16px;}
+   .details p{font-size:15px;}
+   .details h2 strong{font-size:24px;}
+   .details p .rank{font-size:24px;}
+   .bar .text{font-size:12px;}
+   .bar .box .tiao {width: 14px;border-radius: 6px;}
+   .bar .num{font-size:12px;padding: 3px 6px;}
+}
+/* 补全底部灰色*/
+.yanshe{position: fixed;bottom:0;left:0;width: 100%;z-index:100;height: 40%;background-color: #ecf0f5;}

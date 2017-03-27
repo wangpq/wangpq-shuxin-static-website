@@ -1,0 +1,489 @@
+﻿/**
+ * download css file for download page
+ * Released under the MIT license
+ * http://www.ishuxin.cn/license
+ * Author : Wangpq;
+ * Date: 2015-04-27T18:00Z
+ */
+body{
+  background-color: #f9f9f9;
+}
+#article{
+    margin-top:0;
+    overflow:hidden;
+    background: #252527 url(../images/download/download-bg.png) top center no-repeat;
+    background-size:auto 100%;
+    position: relative;
+}
+#article .wrap{
+    max-width: 1150px;
+    margin: 0 auto;
+    overflow:hidden;
+}
+#article h2{
+   text-align: center;
+   font-weight: normal;
+   font-size:46px;
+   padding:0;
+   margin-top:118px;
+   margin-bottom:20px; 
+   color:#fff;
+}
+#article h3{
+   text-align: center;
+   font-weight: normal!important;
+   margin-top:10px;
+   color:#f0f0f0;
+   font-size:22px;
+   margin-bottom:66px;
+}
+#article h6 .am-btn{
+    margin:0 0 20px;
+    width: 184px;
+    height: 55px;
+}
+#article .download{
+  max-width:50%;
+  display: inline-block;
+  text-align: center;
+  margin-top:10px;
+}
+#article .download .am-btn i{
+    font-size:34px;
+    vertical-align:middle;
+    margin-right:12px;
+    margin-top:-4px;
+}
+#article .download .am-btn .text{
+    font-size:12px;
+    vertical-align:middle;
+    margin-bottom:0;
+    cursor:pointer;
+}
+#article .download .am-btn .text span{
+  font-size:12px;
+  font-weight: normal;
+  display: block;
+  text-align: left;
+}
+#article .download .am-btn .text b{
+  display: block;
+  text-align: left;
+  font-weight: normal;
+  font-size:16px;
+}
+#article .download .sx-btn-danger,
+#article .download .sx-btn-danger:visited{
+  background-color: #e66969;
+  border-color:#e66969 ;
+  color:#fff;
+  cursor:pointer;
+}
+#article .download .sx-btn-danger:hover,
+#article .download .sx-btn-danger:active{
+  background-color: #e45151;
+  border-color:#e45151 ;
+}
+#article .download .sx-btn-warning,
+#article .download .sx-btn-warning:visited{
+  background-color: #e9795d;
+  border-color:#e9795d ;
+  color:#fff;
+  cursor:pointer;
+}
+#article .download .sx-btn-warning:hover,
+#article .download .sx-btn-warning:active{
+  background-color: #e86140;
+  border-color:#e86140 ;
+}
+
+#article .weixin-box{
+  max-width:50%;
+  display: inline-block;
+  text-align: center;
+  vertical-align:top;
+}
+#article .weixin{
+  display: inline-block;
+  text-align: center;
+  height: 150px;
+  width: 150px;
+  line-height: 150px;
+  vertical-align:top;
+  position: relative;
+  margin:0 18px;
+}
+#article .weixin span{
+  display: block;
+  position: absolute;
+  left:0;
+  top:0;
+  content: "";
+  width: 18px;
+  height: 18px;
+}
+#article .weixin .lt{
+  left:0;
+  top:0;
+}
+#article .weixin .rt{
+  right:0;
+  left:132px;
+  top:0;
+}
+#article .weixin .lb{
+  left:0;
+  top:132px;
+}
+#article .weixin .rb{
+  right:0;
+  left:132px;
+  top:132px;
+}
+
+
+#article .weixin span:before,
+#article .weixin span:after{
+  display: block;
+  position: absolute;
+  content: "";
+}
+#article .weixin .lt:before{
+  left:0;
+  top:0;
+  width: 4px;
+  height: 20px;
+  background: #c5c4c4;
+}
+#article .weixin .lt:after{
+  left:0;
+  top:0;
+  width: 20px;
+  height: 4px;
+  background: #c5c4c4;
+}
+#article .weixin .rt:before{
+  right:0;
+  top:0;
+  width: 4px;
+  height: 20px;
+  background: #c5c4c4;
+}
+#article .weixin .rt:after{
+  right:0;
+  top:0;
+  width: 20px;
+  height: 4px;
+  background: #c5c4c4;
+}
+#article .weixin .lb:before{
+  left:0;
+  bottom:0;
+  width: 20px;
+  height: 4px;
+  background: #c5c4c4;
+}
+#article .weixin .lb:after{
+  left:0;
+  bottom:0;
+  width: 4px;
+  height: 20px;
+  background: #c5c4c4;
+}
+#article .weixin .rb:before{
+  right:0;
+  bottom:0;
+  width: 20px;
+  height: 4px;
+  background: #c5c4c4;
+}
+#article .weixin .rb:after{
+  right:0;
+  bottom:0;
+  width: 4px;
+  height: 20px;
+  background: #c5c4c4;
+}
+#article #img{
+  height: 600px;
+  line-height: 600px;
+  vertical-align:middle;
+}
+#article #img img{
+  vertical-align:middle;
+  background: url(../images/loading.gif) center center no-repeat; 
+}
+@media only screen and (max-width:850px){
+  #article .download{
+    width: 100%;
+    max-width:100%;
+  }
+  #article .weixin-box{
+    width: 100%;
+    max-width:100%;
+
+  }
+  #article hgroup h6{
+    text-align: center;
+  }
+}
+@media only screen and (max-width:680px) {
+  #article{
+      background: #252527 url(../images/download/download-bg-min.jpg) top center no-repeat;
+  }
+  #article .download{
+    width: 100%;
+    max-width:100%;
+  }
+  #article .weixin-box{
+    width: 100%;
+    max-width:100%;
+    display: none;
+  }
+}
+
+@media only screen and (max-width:480px) {
+  #article{
+      background: #252527 url(../images/download/download-bg-min.jpg) top center no-repeat;
+  }
+  #article .download{
+    width: 100%;
+    max-width:100%;
+  }
+  #article .weixin-box{
+    width: 100%;
+    max-width:100%;
+    display: none;
+  }
+}
+body>#info{
+  margin:0 auto;
+  padding-top:122px;
+}
+figure{
+  padding:0 8% 60px!important;
+  max-width:1150px;
+}
+figure>.text{
+  vertical-align:middle;
+  padding:0 18px;
+  height: 600px;  
+  position: relative;
+  z-index:10;
+}
+figure>.text>h4{
+    font-size:30px;
+    font-weight:normal;
+    color:#3e4341; 
+    text-align: left;
+    width: 100%;
+    margin-top:56px;
+}
+figure>.text>p{
+    font-size:16px;
+    color:#6f6f6f; 
+    text-align: left;
+    line-height: 36px;
+    max-width:480px;
+}
+figure>.image.r{
+  text-align: left;
+  position: relative;
+  padding-left:0;
+  padding-right:0;
+}
+figure>.image.l{
+  text-align: right;
+  position: relative;
+  padding-left:0;
+  padding-right:0;
+}
+figure>.image img{
+  vertical-align:middle;
+  display: inline-block;
+  height: 550px;
+}
+figure>.image .img-box{
+  display: inline-block;
+  height: 550px;
+  min-width:260px;
+  position: relative;
+  background: url(../images/loading.gif) center center no-repeat;
+}
+
+figure>.image.r span{
+  position: absolute;
+  display: inline-block;
+  width: 480px;
+  height: 480px;
+  right:254px;
+  overflow:hidden;
+}
+figure>.image.r span:before{
+  position: absolute;
+  left: 310px;
+  top: 32px;
+  content: "";
+  display: block;
+  width: 480px;
+  height: 480px;
+  background-color: rgba(0,0,0,0.05);
+  -webkit-transform:skew(-35deg);
+     -moz-transform:skew(-35deg); 
+      -ms-transform:skew(-35deg); 
+       -o-transform:skew(-35deg); 
+          transform:skew(-35deg);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(55,55,55,0.05)), color-stop(100%,transparent)); 
+  background: -webkit-linear-gradient(rgba(55,55,55,0.05)), transparent); 
+  background: -moz-linear-gradient(top, rgba(55,55,55,0.05) 0%, transparent 100%); 
+  background: -o-linear-gradient(top, rgba(55,55,55,0.05) 0%, transparent 100%); 
+  background: -ms-linear-gradient(top, rgba(55,55,55,0.05) 0%, transparent 100%); 
+  background: linear-gradient(top, rgba(55,55,55,0.05) 0%, transparent 100%); 
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f8f8f8', endColorstr='transparent',GradientType=0 );     
+}
+
+
+figure>.image.l span{
+  position: absolute;
+  display: inline-block;
+  width: 480px;
+  height: 480px;
+  right:254px;
+  overflow:hidden;
+}
+figure>.image.l span:before{
+  position: absolute;
+  left: 310px;
+  top: 24px;
+  content: "";
+  display: block;
+  width: 480px;
+  height: 480px;
+  background-color: rgba(55,55,55,0.05);
+  -webkit-transform:skew(-35deg);
+     -moz-transform:skew(-35deg); 
+      -ms-transform:skew(-35deg); 
+       -o-transform:skew(-35deg); 
+          transform:skew(-35deg);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(55,55,55,0.05)), color-stop(100%,transparent)); 
+  background: -webkit-linear-gradient(rgba(55,55,55,0.05)), transparent); 
+  background: -moz-linear-gradient(top, rgba(55,55,55,0.05) 0%, transparent 100%); 
+  background: -o-linear-gradient(top, rgba(55,55,55,0.05) 0%, transparent 100%); 
+  background: -ms-linear-gradient(top, rgba(55,55,55,0.05) 0%, transparent 100%); 
+  background: linear-gradient(top, rgba(55,55,55,0.05) 0%, transparent 100%); 
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ccc', endColorstr='#f0f0f0', GradientType='0'); /* IE*/
+}
+figure>.image.l .img-box{
+  margin-right:114px;
+}
+figure>.text.r{
+  padding-right:114px;
+}
+figure.h-c{
+  position: relative;
+  max-width:100%!important;
+  background-color: #fff;
+  height: 680px;
+  overflow: hidden;
+}
+figure.h-c+figure{
+  padding-top:120px!important;
+}
+figure.h-c .text{
+   max-width:480px;
+   margin:0 auto;
+   height: auto;
+  padding-top:114px;
+}
+figure.h-c .image{
+   text-align: center;
+   padding-left:0;
+}
+figure.h-c .image span{
+   left:50%;
+   right:auto;
+   margin-left:-604px;
+}
+figure.h-c>.text>h4{
+  text-align: center;
+}
+figure.h-c>.text>p{
+  margin-bottom:60px;
+}
+figure.h-c .img-box{
+  margin:0 auto;
+}
+figure.h-c .img-box img{
+  text-align: center;
+}
+@media only screen and (max-width: 640px) {
+  #article #img{
+    height: auto;
+    line-height: 0;
+    padding:30px 15px 60px;
+  }
+  figure{
+    border-bottom: 1px dashed #ddd;
+  }
+  figure:last-of-type{
+    border-bottom: none;
+  }
+  figure:nth-of-type(3){
+    margin-top:60px;
+  }
+  figure>.text{
+    height: auto; 
+  }
+  figure>.text>h4{
+    text-align: center;
+  }
+  figure>.text.r{
+    padding-right:0;
+  }
+  figure>.image.r{
+    text-align: center;
+  }
+  figure>.image.l .img-box{
+    margin-right:0;
+  }
+  figure>.image.l{
+    text-align: center;
+  }
+
+}
+
+/* APP下载弹出提示框 */
+.black-box{
+  position: fixed;
+  left:0;
+  right:0;
+  bottom:0;
+  top:0;
+  z-index:5000;
+  background-color: rgba(0,0,0,0.65);
+  display: none;
+  -webkit-transition: all 0.2s ease-in-out 0;
+       -o-transition: all 0.2s ease-in-out 0;
+          transition: all 0.2s ease-in-out 0;
+}
+.black-box .text{
+  background-color: rgba(255,255,255,0.96);
+  padding:18px 60px 18px 15px;
+  line-height: 1.5;
+  font-size:16px;
+  color:#555;
+}
+.black-box .text strong{
+  color:#EC2126;
+}
+.black-box .i-point-to,
+.black-box img{
+  background: url(../images/pointTo.png) center center no-repeat;
+  background-size: 100% 100%;
+  width: 36px;
+  height: 40px;
+  display: block;
+  position: absolute;
+  right:15px;
+  top:22px;
+}

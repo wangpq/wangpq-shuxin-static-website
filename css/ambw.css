@@ -1,0 +1,240 @@
+﻿/**
+ * ambw css file for ambw page
+ * Released under the MIT license
+ * http://www.ishuxin.cn/license
+ * Author : Wangpq;
+ * Date: 2015-04-22T18:00Z
+ */
+
+figure{
+	margin-top:0;
+    display: block;
+    height: 670px;
+    margin-bottom:0;
+    background: url(../images/loading.gif) center center no-repeat;
+    position: relative;
+}
+figure .module{
+	text-align: center;
+	padding:30px 0;
+	position: relative;
+    height: 670px;
+    background: url(../images/ambw/ambw.jpg) top center no-repeat;
+}figure .tel{
+	display: inline-block;
+	width: 290px ;
+}
+figure .text{
+	display: none;
+	position: absolute;
+	left:0;
+	right:0;
+	top:300px;
+	color:#4c73d8;
+	font-size:16px;
+	vertical-align:middle;
+}
+figure .text p{
+	margin:0;
+	padding:0;
+}
+figure .text i.icon-money{
+	width: 35px;
+	height: 44px;
+	display: inline-block;
+	background: url(../images/ambw/moneybag.png) center center no-repeat;
+	background-size: 100% 100%;
+	vertical-align:middle;
+	margin:0 8px;
+}
+figure .text i.icon-face{
+	width: 16px;
+	height: 16px;
+	display: inline-block;
+	background: url(../images/ambw/smiling.png) center center no-repeat;
+	vertical-align:middle;
+	margin:0 8px;
+}
+figure .text span{
+	vertical-align:middle;
+}
+figure .groom{
+	height: 320px;
+	width: 320px;
+	display: inline-block;
+}
+figure .gm-1{
+	background: url(../images/ambw/gm-1.png) center center no-repeat;
+	background-size: 100% 100%;
+}
+figure .gm-2{
+	background:url(../images/ambw/gm-2.png) center center no-repeat;
+	background-size: 100% 100%;
+    -webkit-transform:translate(-16px,300px);
+       -moz-transform:translate(-16px,300px);
+         -o-transform:translate(-16px,300px);
+        -ms-transform:translate(-16px,300px);
+            transform:translate(-16px,300px);
+	border-radius:50%;  
+
+}
+
+@media only screen and (max-width: 960px) {
+	figure .gm-2{
+		background: url(../images/ambw/gm-2.png) center center no-repeat;
+		background-size: 100% 100%;
+	    -webkit-transform:translate(170px,-34px);
+	       -moz-transform:translate(170px,-34px);
+	         -o-transform:translate(170px,-34px);
+	        -ms-transform:translate(170px,-34px);
+	            transform:translate(170px,-34px);
+	}
+}
+@media only screen and (max-width: 640px) {
+	figure .module{
+	    background: url(../images/ambw/ambw-2.jpg) top center no-repeat;
+	}
+	figure .text{
+		display: block;
+	}
+	figure .gm-2{
+		background: url(../images/ambw/gm-2.png) center center no-repeat;
+		background-size: 100% 100%;
+	    -webkit-transform:translate(0,-58px);
+	       -moz-transform:translate(0,-58px);
+	         -o-transform:translate(0,-58px);
+	        -ms-transform:translate(0,-58px);
+	            transform:translate(0,-58px);
+	}
+}
+@media only screen and (max-width: 480px) {
+	figure .gm-1{
+		background-size: 86% 86%;
+		position: relative;
+		top:-28px;
+	}
+	figure .gm-2{
+		background:url(../images/ambw/gm-2.png) center center no-repeat;
+		background-size: 86% 86%;
+		position: relative;
+		bottom:28px;
+	    -webkit-transform:translate(0,0);
+	       -moz-transform:translate(0,0);
+	         -o-transform:translate(0,0);
+	        -ms-transform:translate(0,0);
+	            transform:translate(0,0);
+	}
+	figure .text{
+		display: block;
+		top:304px;
+	}
+
+}
+
+
+
+.why{
+	max-width:1180px;
+	padding: 0 15px 52px;
+	margin:22px auto 0;
+}
+.why .col-md-6{
+	padding:0;
+}
+.why h2{
+	font-size:28px;
+	color:#45637e;
+	font-weight: normal;
+	padding-top:40px;
+}
+.why .m{
+
+}
+.why dl{
+	padding-top:20px;
+}
+.why dt{
+   color:#47adb9;
+   font-size:24px;
+   font-weight: normal;
+   vertical-align:middle;
+   overflow:hidden;
+   position: relative;
+}
+.why dt:after{
+	position: absolute;
+	right: 0;
+	top: 0;
+	content: "";
+	display: block;
+	width: 60px;
+	height: 80px;
+	background: #fcfcfc;
+}
+.why dt i{
+  display: inline-block;
+  width: 40px;
+  height: 10px;
+  position: relative;
+  margin-right:10px;
+}
+.why dt i:before{
+	position: absolute;
+	right: 0;
+	top: 0;
+	content: "";
+	display: block;
+	width: 20px;
+	height: 1px;
+	background: #47adb9;
+}
+.why dt i:after{
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	content: "";
+	display: block;
+	width: 30px;
+	height: 1px;
+	background: #47adb9;
+}
+.why dt span{
+   vertical-align:middle;
+   display: block;
+   height: 1px;
+   width: 100%;
+   background: #dededf;
+   position: absolute;
+   left:130px;
+   top:20px;
+}
+.why dd{
+   padding-left:50px;
+}
+.why dd h6{
+   color:#575757;
+   font-size:16px;
+   padding:20px 0 10px;
+   margin-bottom:0;
+   margin-top:0;
+}
+.why dd p{
+   color:#575757;
+   margin-top:0;
+   margin-bottom:0;
+}
+.why .m2 dt{
+   color:#eb694f;
+}
+.why .m2 dt i:before,
+.why .m2 dt i:after{
+	background: #eb694f;
+}
+@media only screen and (max-width: 640px) {
+	.why dt:after{
+		background: transparent;
+	}
+	.why dd{
+	   padding-left:0;
+	}
+}

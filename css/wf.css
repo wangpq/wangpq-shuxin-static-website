@@ -1,0 +1,53 @@
+﻿/**
+ * wf css file for wf page
+ * Released under the MIT license
+ * http://www.ishuxin.cn/license
+ * Author : Wangpq;
+ * Date: 2015-05-04T16:00Z
+ */
+#fix-box{
+	position:fixed;
+	top:58px;
+	left:0;
+	right:0;
+	background:rgba(255,255,255,0.9);
+	border-top: 1px solid #f0f0f0;
+	border-bottom: 1px solid #f0f0f0;
+	z-index:99;
+	width:100%;
+	z-index:25;
+}
+#fix-box .content{
+	max-width: 1180px;
+	margin: 0 auto;
+	font-weight: normal;
+	font-size: 1.713em;
+	color: #4699F0;
+	padding: 2px 15px 2px 15px;
+	margin-top: 0;
+}
+#wf-box{
+	max-width: 1180px;
+	margin: 0 auto;
+}
+#wf-box .content{
+	padding:18px 15px 48px 15px;
+}
+#wf-box .content h3{
+	margin-top: 40px;
+	font-size: 1.4em;
+	font-size: 1.713em;
+	font-weight: normal;
+	margin-bottom: 10px;
+}
+#wf-box .content p {
+	line-height: 48px;
+	color: #646464;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+@media only screen and (max-width: 640px) {
+	#wf-box .content {
+	    padding: 20px 15px 48px 15px;   
+	}
+}

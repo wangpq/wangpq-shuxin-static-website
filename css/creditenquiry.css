@@ -1,0 +1,437 @@
+﻿/**
+ * creditenquiry css file for creditenquiry and creditenquiryok page
+ * Released under the MIT license
+ * http://www.ishuxin.cn/license
+ * Author : Wangpq;
+ * Date: 2015-04-22T18:00Z
+ */
+body{
+	background: url(../images/creditenquiry/bd-bg.jpg) top center repeat;
+}
+ul,li{
+	list-style:none;
+	margin:0;
+	padding:0;
+}
+/************ creditenquiry css ************/
+#creditenquiry{
+  margin-top:0;
+  padding-top:150px;
+  padding-bottom:146px;
+  margin-bottom:236px;
+}
+.search-result-no{
+	padding-top:110px!important;
+    margin-bottom:0!important;
+}
+#creditenquiry h2{
+	text-align: center;
+	color:#4d575f;
+	font-size:28px;
+	font-weight: normal;
+	margin-bottom:0;
+	padding:0 15px 0;
+}
+.search-enter { 
+	width:600px;
+	margin:74px auto 56px;
+	position: relative;
+	overflow:hidden;
+	height: 62px;
+}
+.search-enter .wrap{ 
+	position: absolute;
+	left:0;
+	right:70px;
+}
+.search-input{ 
+	padding-left:18px;
+	display: block;
+	width: 100%;
+	height:62px;
+	padding-top:12px;
+	padding-bottom:12px;
+	border:1px solid #c2d2d2;
+	border-radius:2px 0 0 2px;
+	font-size:20px;
+	color:#363846;
+	background-size:12px 18px;
+    outline:none;
+}
+.search-input:focus{
+	border-color:#0db7b9;
+}
+.search-input:blur{
+	border-color:#c2d2d2;
+}
+.search-btn{ 
+	position: absolute;
+	right:0;
+	top:0;
+	width:70px;
+	height:62px;
+	border:none;
+	background: #0db7b9 url(../images/icon-search.png) center center no-repeat;\
+	line-height:9999px;
+	cursor:pointer;
+	overflow:hidden;
+	text-indent: -5000px;
+	border-radius:0;
+	background-clip: padding-box;
+	overflow:hidden;
+}
+.search-result{
+	max-width:1180px;
+	padding:0 15px;
+	margin:0 auto;
+}
+.search-result h4{
+	font-size:22px;
+	font-weight: normal;
+	color:#4293e9;
+	text-align:center;
+}
+.search-result p{
+	font-size:18px;
+	color:#575757;
+	text-align:center;
+}
+.search-result p span{ 
+	padding:0 10px;
+	font-size:36px;
+}
+.search-result p{
+    font-size:18px;
+    color:#575757;
+    margin-bottom:8px;
+    margin-top:8px;
+}
+.search-result .i-search-no{
+	display: inline-block;
+	vertical-align:middle;
+	width: 30px;
+	height: 30px;
+	background: url(../images/i-search-no.png);
+}
+
+.help{
+	width: 600px;
+	margin: 0 auto;
+	position: relative;
+	overflow: hidden;
+	margin-bottom:100px;
+}
+.help h2{
+    font-size:18px;
+    color:#45637e;
+    margin-bottom:12px;
+    vertical-align:middle;
+}
+.help p{
+	line-height: 30px;
+	margin-bottom:0;
+	margin-top:0;
+	font-size:16px;
+}
+@media only screen and (max-width: 640px) {
+	#creditenquiry{
+	  padding-top:66px;
+	  padding-bottom:0;
+	}
+	.search-enter { 
+		width:300px;
+		margin:24px auto 24px;
+		position: relative;
+		overflow:hidden;
+	}
+	.search-enter .wrap{ 
+		right:48px;
+	}
+	.search-input{ 
+		height:44px;
+		font-size:18px;
+		padding-top:8px;
+		padding-bottom:8px;
+	}
+	.search-btn{ 
+		width:48px;
+		height:44px;
+        background-size: 50% auto;
+	}
+	.help{
+		width:300px;
+		margin:24px auto 44px;
+		position: relative;
+		overflow:hidden;
+	}
+}
+	
+
+/************ creditenquiryok css ************/
+#query-result{
+   height: 400px;
+   margin:116px auto 80px;
+   max-width:1180px;
+   width: 100%;
+   padding:0 15px;
+   display: table;
+}
+#query-result .info{
+   padding-left:0;
+   padding-right:0; 
+   display: table-cell;
+   width:250px;
+}
+#query-result .info dl{
+	background-color: #ecf0f5;
+	position: relative;
+	z-index:10;
+	padding-left:15px;
+	padding-right:15px; 
+	margin-top:148px;
+	margin-bottom:0;
+	position: relative;
+}
+#query-result .info dd{
+	padding-bottom:52px; 
+	padding-top:8px;
+}
+#query-result .info dl .circle:before{
+	position: absolute;
+	left:0;
+	right:0;
+	top:-49px;
+	width:100%;
+	height: 98px;
+	content:'';
+	display: block;
+	background-color: #ecf0f5;
+	border-radius:50%;
+	z-index:9;
+}
+#query-result .info dl .person:before{
+	position: absolute;
+	left:0;
+	right:0;
+	top:-107px;
+	width:100%;
+	height: 58px;
+	content:'';
+	display: block;
+	background: url(../images/creditenquiry/icon-person.png) top center no-repeat;
+	border-radius:50%;
+	z-index:9;
+}
+#query-result h2{
+	text-align: center;
+	color:#646e76;
+	font-size:28px;
+	font-weight: normal;
+	position: relative;
+	z-index:11;
+	top:-12px;
+	margin-bottom:10px;
+}
+
+#query-result .info .search-box { 
+	width:100%;
+	position: relative;
+	overflow:hidden;
+	height: 38px;
+}
+#query-result .info .search-box .wrap{ 
+	position: absolute;
+	left:0;
+	right:38px;
+}
+#query-result .info .search-input{ 
+	padding-left:12px;
+	display: block;
+	width: 100%;
+	height:38px;
+	line-height: 38px;
+	border:1px solid #c2d2d2;
+	border-radius:2px 0 0 2px;
+	font-size:14px;
+	font-weight: normal;
+	color:#363846;
+	background-size:12px 18px;
+    outline:none;
+}
+#query-result .info .search-input:focus{
+	border-color:#0db7b9;
+}
+#query-result .info .search-input:blur{
+	border-color:#c2d2d2;
+}
+#query-result .info .search-btn{ 
+	position: absolute;
+	right:0;
+	top:0;
+	width:38px;
+	height:38px;
+	border:none;
+	background: #0db7b9 url(../images/icon-search.png) center center no-repeat;
+	background-size:60% auto;
+	cursor:pointer;
+	overflow:hidden;
+	text-indent: -5000px;
+	overflow:hidden;
+}
+
+#query-result .info h5{
+   color:#575757;
+   font-weight: 500;
+   font-size:16px;
+   margin-top:32px;
+   margin-bottom:0;
+   text-shadow:1px 1px rgba(0,0,0,0.1);
+}
+#query-result .info p{
+   color:#575757;
+   font-size:16px;
+   margin:0 auto;
+}
+#query-result .info p strong{
+   color:#ef6c00;
+   font-size:30px;
+   font-weight: normal;
+}
+#query-result .detail{
+   display: table-cell;
+   position: relative;
+}
+#query-result .detail .bd{
+   background-color: #fff;
+   padding:56px 135px;
+   position: relative;
+   top:48px;
+}
+#query-result .detail h2{
+    text-align: left;
+    padding-left:40px;
+}
+#query-result .detail h2+p{
+    padding-left:44px;
+    margin:38px 0;
+}
+#query-result .detail p>span{
+    position: relative;
+    height: 24px;
+    line-height: 24px;
+    padding-left:18px;
+    vertical-align:middle;
+    cursor:default;
+    color:#575757;
+    font-size:16px;
+}
+#query-result .detail p>span:not(:first-of-type){
+	margin-left:2em;
+}
+#query-result .detail p>span:before{
+    position: absolute;
+    left:0;
+    top:50%;
+    margin-top:-6px;
+	display: inline-block;
+	content:'';
+	background-color: transparent;
+	width: 11px;
+	height: 11px;
+	border: 1px solid transparent;
+}
+#query-result .detail p>.primary:before{
+    background-color: #a3d1ff;
+	border-color: #a3d1ff;
+}
+#query-result .detail p>.default:before{
+   background-color: #f5f9fe;
+	border-color: #f0f0f0;
+}
+.dl-box{
+    display: table;
+    width: 100%;
+}
+.dl-box>dt{
+   width: 44px;
+   color:#7f8991;
+   padding:0;
+   display: table-cell;
+   height:94px ;
+   line-height: 30px;
+   overflow:hidden;
+   vertical-align:middle;
+   font-size:28px;
+   font-weight: normal;
+   text-align: left;
+}
+.dl-box>dd{
+   display: table-cell;
+   margin:0;
+   padding:0;
+   height:94px ;
+   vertical-align:middle;
+}
+.dl-box>dd .box{
+	display: block;
+}
+.dl-box>dd .box .w{
+   background-color: transparent;
+   height: 46px; 
+}
+.dl-box>dd .primary .w{
+   background-color: #a3d1ff;
+}
+.dl-box>dd .default .w{
+   background-color: #eaf3fc;
+}
+@media only screen and (max-width: 959px) {
+	#query-result .detail .bd{
+	   background-color: #fff;
+	   padding:56px 15px;
+	   position: relative;
+	   top:48px;
+	}
+}
+@media only screen and (max-width: 639px) {
+	#query-result .info{
+	   display: block;	
+	   width: 100%;
+	}
+	#query-result .detail{
+	   display: block;	
+	}
+    #query-result .info p{
+    	text-align: center;
+    }
+    #query-result .info h5{
+    	text-align: center;
+    }
+	#query-result .detail h2 {
+		text-align: left;
+		padding-left: 42px;
+	} 
+	#query-result .detail h2+p {
+	    padding-left: 44px; 
+		text-align: left;
+	}
+    .dl-box>dd .box .w{
+    	height: 28px;
+    }
+    #query-result .info .p{
+        width: 32%;
+        display: inline-block;
+	}
+	#query-result .detail .bd{
+		top:0
+	}
+}
+@media only screen and (max-width: 480px) {
+    #query-result .info .p{
+        width: 100%;
+        display: block;
+	}
+	#query-result .detail .bd{
+		top:0
+	}
+}

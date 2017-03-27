@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>资金安全</title>
+  <meta charset="utf-8">
+  <meta name="keywords" content="金融，社交，信用，熟信，借贷，征信，理财，贷款">
+  <meta name="description" content="熟信--首款社交金融应用。信用好不好，熟人知道，熟信知道。下载熟信，对熟人匿名授信，也可查询自己、熟人信用。熟人匿名借贷功能即将推出，让借贷更体面。">
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1.5, user-scalable=yes">
+  
+  <!-- Set render engine for 360 browser -->
+  <meta name="renderer" content="webkit">
+  <!-- No Baidu Siteapp-->
+  <meta http-equiv="Cache-Control" content="no-siteapp"/>
+  <meta name="apple-itunes-app" content="app-id=955361348">
+  <link rel="icon" type="image/png" href="images/favicon.png">
+
+  <!-- Add to homescreen for Chrome on Android -->
+  <meta name="mobile-web-app-capable" content="yes">
+
+  <!-- Add to homescreen for Safari on iOS -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="shuxin UI">
+
+  <!-- Tile icon for Win8 (144x144 + tile color) -->
+  <meta name="msapplication-TileImage" content="images/favicon.png">
+  <meta name="msapplication-TileColor" content="#0e90d2">
+
+  <!-- 使用的CSS -->
+  <link rel="stylesheet" href="css/amaze/amazeui.css">
+  <link rel="stylesheet" href="css/public.css">
+  <link rel="stylesheet" href="css/security.css">
+  <!-- 使用的JS -->
+  <script src="js/jquery/jquery-2.0.3.min.js"></script>
+  <script src="js/amaze/amazeui.min.js"></script>
+  <script src="js/jquery.sx.common.js"></script>
+
+</head>
+<body>
+<!-- 页头 -->
+<div class="header">
+<header class="am-topbar admin-header">
+  <div class="wrap">
+  <div class="am-topbar-brand">
+    <a href="index.html">熟信---熟人匿名借贷，让借贷更体面</a>
+  </div>
+  <button class="am-topbar-btn am-topbar-toggle am-btn am-btn-sm  am-show-sm-only" data-am-collapse="{target: '#topbar-collapse'}">
+  	<span class="am-sr-only">导航切换</span>
+  	<span class="am-icon-bars"></span>
+  </button>
+  <div class="am-collapse am-topbar-collapse" id="topbar-collapse">
+    <ul class="am-nav am-nav-pills am-topbar-nav am-topbar-right admin-header-list">
+      <li>
+        <a href="index.html" target="_parent">首页 </a>
+      </li>
+      <li>
+        <a href="creditenquiry.html" target="_parent">信用查询 </a>
+      </li>
+      <li>
+        <a href="ambw.html" target="_parent">匿名借贷 </a>
+      </li>
+      <li>
+        <a href="security.html" target="_parent">资金安全 </a>
+      </li>
+      <li>
+        <a href="download.html" target="_parent">下载 </a>
+      </li>
+    </ul>
+  </div>
+  </div>
+</header>
+</div>
+  <script>
+    $(function(){
+       // 应用头部headerFixed 文件
+       $("header.am-topbar").headerFixed();         
+    })
+  </script>
+<section class="workflow" id="workflow">
+  <div class="am-g wf-box">
+    <div class="col-md-6 am-u-md-6 wf wf-r">
+        <h2>借款流程</h2>
+        <div class="bd">
+          <p class="text">
+            <label><i>01</i></label>
+            <span>借款双方都在易宝支付开立托管账户。</span>
+          </p>
+          <p class="line">
+            <label><i></i></label>
+          </p>  
+          <p class="text">
+            <label><i>02</i></label>
+            <span>借款人匿名提出借款需求，明确金额、时间、利率。</span>
+          </p>
+          <p class="line">
+            <label><i></i></label>
+          </p>
+          <p class="text">
+            <label><i>03</i></label>
+            <span>出借人同意，支付借款，将个人银行卡内的资金充值到易宝账户。</span>
+          </p>
+          <p class="line">
+            <label><i></i></label>
+          </p>
+          <p class="text">
+            <label><i>04</i></label>
+            <span>熟信向易宝发出指令，将出借人资金转至借款人易宝账户。</span>
+          </p>
+          <p class="line">
+            <label><i></i></label>
+          </p>
+          <p class="text">
+            <label><i>05</i></label>
+            <span>借款人将资金从易宝账户提现至个人银行卡。</span>
+          </p>
+        </div>
+    </div>
+    <div class="col-md-6 am-u-md-6 wf wf-b">
+      <h2>还款流程</h2>
+      <div class="bd">
+        <p class="text">
+          <label><i>01</i></label>
+          <span>借款人将本金、利息、手续费、服务费从个人银行卡充值到易宝账户。</span>
+        </p>
+        <p class="line">
+          <label><i></i></label>
+        </p>  
+        <p class="text">
+          <label><i>02</i></label>
+          <span>熟信向易宝发出指令，将本金、利息转至出借人易宝账户，服务费由熟信收取，手续费由易宝收取。</span>
+        </p>
+        <p class="line">
+          <label><i></i></label>
+        </p>
+        <p class="text">
+          <label><i>03</i></label>
+          <span>出借人将本金、利息从易宝账户提现至个人银行卡。</span>
+        </p>
+      </div>   
+    </div>
+</section>
+
+<article>
+  <h2>五大环节，严控风险</h2>
+  <h6>1、亲自授信</h6>
+  <p>只有您信任、被授信的联系人，发出借款申请，您才能看到。您不信任、未授信的联系人，即使发出借款申请，您也看不到。</p>
+  <h6>2、身份审核</h6>
+  <p>熟信严格审核借款人身份，包括姓名、身份证号、手机号码、银行卡号，以及身份证正反面、手持身份证照片，确保借款人是授信过的借款人。</p>
+  <h6>3、提醒还款</h6>
+  <p>借款到期之前，熟信将通过系统消息、短信、电话等方式提醒借款人及时还款，以免影响信用记录。</p>
+  <h6>4、逾期通报</h6>
+  <p>借款人一旦逾期，违约信息将通过系统消息、短信、网络等渠道，通报给借贷双方熟人圈，所有人都可以查看，社会压力大。</p>
+  <h6>5、法律支持</h6>
+  <p>熟信保存借贷合同、划款记录等证据。一旦出现坏账，熟信将提供法律支持，以电子邮件、快递等方式将电子、纸质证据提交给出借人，确认债权，方便追讨，诉讼。</p>
+</article>
+
+<aside>
+  <strong>易宝简介</strong>
+  ：易宝支付（YeePay）成立于2003年，是老牌支付机构、互联网金融领军企业。总部位于北京，与近百家金融机构战略合作,交易金额超过一万亿元。
+</aside>
+
+
+<!-- 页脚 -->
+<footer>
+  <div id="top" class="clx">
+    <dl>
+      <dt>关于我们</dt>
+      <dd>
+        <a href="frilendStory.html" target="_blank">熟信故事</a>
+        <a href="contactUs.html" target="_blank">联系我们</a>
+        <a href="joinUs.html" target="_blank">招聘信息</a>
+      </dd>
+    </dl>
+    <dl>
+      <dt>法律声明</dt>
+      <dd>
+        <a href="userAgreement.html" target="_blank">用户协议</a>
+        <a href="lendingAgreement.html" target="_blank">借贷协议</a>
+        <a href="cost.html" target="_blank">费用说明</a>
+      </dd>
+    </dl>
+    <dl>
+      <dt>友情链接</dt>
+      <dd>
+        <a href="http://www.zhonglun.com/cn/index.aspx" target="_blank">中伦律师事务所</a>
+        <a href="http://www.yeepay.com/" target="_blank">易宝支付</a>
+        <a href="http://www.pku.edu.cn/" target="_blank">北京大学</a>
+      </dd>
+    </dl>
+    <dl>
+      <dt>常见问题</dt>
+      <dd>
+        <a href="anypcp.html" target="_blank">匿名原理</a>
+        <a href="aboutAssurance.html" target="_blank">关于担保</a>
+        <a href="collectionflow.html" target="_blank">催收流程</a>
+      </dd>
+    </dl>
+    <div id="info">
+      <p>
+        <a class="icon am-icon-wechat" href="#" target="_blank"></a>
+        <a class="icon am-icon-weibo" href="#" target="_blank"></a>
+      </p> 
+      <p class="hot-tell">400-050-1024</p>
+      <p>周一至周六10:00-21:00(仅收市话费)</p>
+    </div>
+   </div>
+
+   <div class="copyright">
+       <p>京 ICP 备 15002635 号 www.ishuxin.cn 2014-2015  &copy All Rights Reserved</p>
+   </div>
+</footer>
+
+
+</body>
+</html>
